@@ -1,0 +1,16 @@
+# clone the existing repo
+git clone  git@github.com:user/repo.git
+# fetch all
+git fetch --all
+# You should see the exisitng orgin using
+git remote -v
+# create a new orging for destination org/repo
+git add new-origin git@github.com:user/new-repo.git
+#push all branch and tag
+git push --all new-origin
+git push --tags new-origin
+# delete the origin which is for old repo
+git remote rm origin
+git remote rename new-origin origin
+
+
